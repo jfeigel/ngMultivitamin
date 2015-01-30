@@ -1,0 +1,49 @@
+/**
+ * $IMAGES
+ * ==========================================================================
+ */
+
+/**
+ * Fluid Images
+ * --------------------------------------------------------------------------
+ * 1. Default images to be fluid in width.
+ * 2. Non-fluid images if you specify `width` and/or `height` attributes.
+ */
+img { 
+    max-width: 100%; /* 1 */
+}
+img[width],
+img[height] {
+    max-width: none; /* 2 */
+}
+
+/**
+ * Image Aesthetics
+ * --------------------------------------------------------------------------
+ * Place any image modifier classes here that might change the aethetics of
+ * and image.
+ * IE. an ".img--round" class that adds a border-radius.
+ */
+.img--round {}
+
+/**
+ * Image Floating
+ * --------------------------------------------------------------------------
+ * Float images right, left, or center with the below classes.
+ */
+.img--right{
+    float: right;
+    margin-bottom: $spacing-unit-base;
+    margin-left: $spacing-unit-base;
+}
+.img--left{
+    float:left;
+    margin-right: $spacing-unit-base;
+    margin-bottom: $spacing-unit-base;
+}
+.img--center{
+    display: block;
+    margin-right: auto;
+    margin-bottom: $spacing-unit-base;
+    margin-left: auto;
+}

@@ -1,0 +1,35 @@
+/**
+ * $LISTS
+ * ==========================================================================
+ */
+
+/**
+ * Set left margin on lists.
+ */
+ul,ol,dd {
+    margin-left: $spacing-unit-base;
+    margin-left: ($spacing-unit-base / $font-size-base)*1rem;
+}
+/**
+ * Remove vertical spacing from nested lists.
+ */
+li {
+    > ul,
+    > ol,
+    &:last-child {
+         margin-bottom:0;
+     }
+}
+
+/**
+ * Simple utility class (list reset) to add when you want an unstyled list.
+ *
+ * I would reccomend adding the mixin to any unique modules you are building, 
+ * rather than adding the utility class to your markup. Notice with this mixin,
+ * setting $margin-bottom to true will keep the usual bottom margin. If taking 
+ * a list outside the usual content flow, you can set this to false for an 
+ * extended reset.
+ */
+.lr {
+	@include list-reset($margin-bottom:true);
+}

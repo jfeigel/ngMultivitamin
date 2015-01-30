@@ -1,0 +1,37 @@
+/**
+ * $SCAFFOLDING
+ * ==========================================================================
+ * Here are any base styles added to all elements (*), <html> or <body>.
+ * If adding a background image or color to the body, I'd suggest doing
+ * that here as well.
+ */
+
+html {
+    font: #{($font-size-base/16px)*1em}/#{$line-height-ratio} $font-family-base;
+    overflow-y:scroll;
+    min-height:100%;
+}
+
+body {
+    /* Body Styles */
+}
+
+@if $border-box-global == true {
+    * {
+        &,
+        &:before,
+        &:after {
+            @include vendor(box-sizing, border-box);
+        }
+    }
+}
+
+@if $position-relative-global == true {
+    * {
+        &,
+        &:before,
+        &:after {
+            position: relative;
+        }
+    }
+}

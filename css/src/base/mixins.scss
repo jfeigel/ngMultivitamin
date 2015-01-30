@@ -1,0 +1,144 @@
+/**
+ * $MIXINS
+ * ==========================================================================
+ * A handful of some very vital and helpful mixins for Vitamin CSS.
+ */
+
+/**
+ * Clearfix
+ * --------------------------------------------------------------------------
+ */
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/**
+ * Font Size
+ * --------------------------------------------------------------------------
+ */
+@mixin font-size($font-size, $line-height:true) {
+    font-size:$font-size;
+    font-size:($font-size / $font-size-base)*1rem;
+    @if $line-height == true {
+        line-height:ceil($font-size / $line-height-base) * ($line-height-base / $font-size);
+    }
+}
+
+/**
+ * Headings
+ * --------------------------------------------------------------------------
+ */
+@mixin headings($from: 1, $to: 6) {
+    %base-heading {
+        @content
+    }
+    @if $from >= 1 and $to <= 6{
+        @for $i from $from through $to {
+            h#{$i}{
+                @extend %base-heading;
+            }
+        }
+    }
+}
+
+/**
+ * Unstyled Lists
+ * --------------------------------------------------------------------------
+ */
+@mixin list-reset($margin-bottom:false) {
+    list-style: none;
+    margin-left: 0;
+    @if $margin-bottom == false {
+        margin-bottom: 0;
+    }
+}
+
+/**
+ * Vendor Prefixer
+ * --------------------------------------------------------------------------
+ */
+@mixin vendor($property, $value...) {
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+/**
+ * Animation Prefixer
+ * --------------------------------------------------------------------------
+ */
+@mixin keyframe($animation-name) {
+    @-webkit-keyframes $animation-name {
+        @content;
+    }
+
+    @-moz-keyframes $animation-name {
+        @content;
+    }
+
+    @-ms-keyframes $animation-name {
+        @content;
+    }
+
+    @-o-keyframes $animation-name {
+        @content;
+    }
+
+    @keyframes $animation-name {
+        @content;
+    }
+}
+
+/**
+ * Animation Prefixer
+ * --------------------------------------------------------------------------
+ */
+ @mixin inverse-content {
+    color: #fff;
+
+    a {
+        color: #fff;
+        border-bottom: 1px dotted rgba(255,255,255,0.3);
+        opacity: 1;
+        @include vendor(transition, all .2s ease);
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+ }
+
+ /**
+ * Placeholder
+ * --------------------------------------------------------------------------
+ */
+@mixin placeholder($color) {
+    &::-moz-placeholder           { color: $color; opacity: 1; }
+    &:-ms-input-placeholder       { color: $color; }
+    &::-webkit-input-placeholder  { color: $color; }
+}
+
+ /**
+ * Media Query
+ * --------------------------------------------------------------------------
+ */
+@mixin media-query($media-query){
+    @if $media-query == palm {
+        @media only screen and (max-width:$palm-start) { @content; }
+    }
+    @if $media-query == portable {
+        @media only screen and (max-width:$portable-start) { @content; }
+    }
+    @if $media-query == desk {
+        @media only screen and (min-width:$portable-start) { @content; }
+    }
+}

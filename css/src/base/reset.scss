@@ -1,0 +1,66 @@
+/**
+ * $RESET
+ * ==========================================================================
+ * An extended reset beyond normalize that clears more default browser 
+ * stylings in order to provide a truely clean slate. I highly recommend 
+ * reading through normalize, so you have a good understanding of everything
+ * it effects.
+ */
+
+/**
+ * Shared Reset
+ * --------------------------------------------------------------------------
+ * Reset margins and paddings on all base html elements, as we define margins
+ * ourselves with @base-spacing-unit in the base config file, padding else
+ * where as needed.
+ */
+h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,
+dl,dd,ol,ul,
+form,fieldset,legend,
+table,th,td,caption,
+hr {
+    margin:0;
+    padding:0;
+}
+
+/**
+ * Horizontal Rule Reset
+ * --------------------------------------------------------------------------
+ * Horizontal rules by default are an element with no height, "border-top:#000"
+ * and "border-bottom:#fff". We remove the white border for a cleaner "flat"
+ * look.
+ */
+hr {
+	border-bottom: none;
+}
+
+/**
+ * Iframe Reset
+ * --------------------------------------------------------------------------
+ * Remove default borders on iframe, as it just makes for a
+ * cleaner default.
+ */
+iframe {
+    border: 0;
+}
+
+/**
+ * Fieldset Reset
+ * --------------------------------------------------------------------------
+ * 1. Ensure it behaves more like a standard block element.
+ * 2. Remove border for a cleaner defualt.
+ */
+fieldset {
+	min-width: 0; /* 1 */
+	border: 0; /* 2 */
+}
+
+/**
+ * Suppress the focus outline on links that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+[tabindex="-1"]:focus {
+	outline: none !important;
+}

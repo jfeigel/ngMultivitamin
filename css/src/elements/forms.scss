@@ -1,0 +1,87 @@
+/**
+ * $FORMS
+ * ==========================================================================
+ * For forms we supply a base class structure, and a very minimal amount of
+ * layout styling. For a greater ability to manipulate the way your forms
+ * layout, including fluid inline forms, check out Vitamin A (Arrange).
+ */
+
+/**
+ * Form Scaffolding
+ * --------------------------------------------------------------------------
+ * These are some base styles and resets on input type to allow for cleaner
+ * consistant styling on modifier classes.
+ */
+.form {
+	/* Custom Form Styles */
+}
+.form__item {
+	margin-bottom: $spacing-unit-half;
+	margin-bottom: ($spacing-unit-half / $font-size-base)*1rem;
+}
+
+/**
+ * Form Control
+ * --------------------------------------------------------------------------
+ * The form control class is the base class that drives the styling on 90% of
+ * of form elements, and should be applied directly to inputs, textareas, and
+ * selects. See the example of usage below...
+ *
+ *	<div class="form__item">
+ *      <label>
+ *          <strong>Name</strong>
+ *          <input class="form-control" id="name" placeholder="Name">
+ *      </label>
+ *  </div>
+ *
+ */
+.form-control {
+	/* Base and Resets */
+	display: block;
+	width: 100%;
+	outline: none;
+	line-height: normal;
+
+	/* Form Element Aesthetics Here */
+}
+
+/**
+ * Form Type
+ * --------------------------------------------------------------------------
+ * Modify styling of verious type elements here. Currently we have set labels
+ * and legends to behave more like headers.
+ */
+label,
+legend {
+	display: block;
+	width: 100%;
+}
+
+/**
+ * Misc Resets
+ * --------------------------------------------------------------------------
+ * These are some miscellaneous resets that may not have the form-control class
+ * applied to them.
+ *
+ * 1. Removes firefox select dropdown arrow. 
+ * 2. Display block for content form flow, and making sure labels stack over inputs.
+ * 3. Position radios and checkboxes better.
+ */
+select { /* 1 */
+	@include vendor(appearance, none);
+	text-indent: 0.01px;
+	text-overflow: '';
+}
+input[type="file"],
+input[type="range"] { /* 2 */
+	display: block;
+}
+input[type="range"] { /* 2 */
+	width: 100%;
+}
+input[type="radio"],
+input[type="checkbox"] { /* 3 */
+	margin: 4px 0 0;
+	margin-top: 1px \9; // IE8-9
+	line-height: normal;
+}

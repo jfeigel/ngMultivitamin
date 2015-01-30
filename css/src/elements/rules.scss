@@ -1,0 +1,18 @@
+/**
+ * $RULES
+ * ==========================================================================
+ */
+
+/**
+ * Base Horizontal Rule
+ * --------------------------------------------------------------------------
+ * 1. Set base margin minus 1px to counter borders (Normally this would be 2px,
+ *    but we've removed the usual bottom border in the "base/_reset.scss" file).
+ * 2. Center rule, in the case a modifier or utility class reduces the width.
+ */
+hr {
+    margin-bottom:$spacing-unit-base - 1px; 								/* 1 */
+    margin-bottom:(($spacing-unit-base - 1px) / $font-size-base)*1rem;		/* 1 */
+    margin-left: auto;														/* 2 */
+	margin-right: auto;														/* 2 */
+}

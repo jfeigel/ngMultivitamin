@@ -1,0 +1,45 @@
+/**
+ * $HEADINGS
+ * ==========================================================================
+ */
+
+/**
+ * Heading Sizes
+ * --------------------------------------------------------------------------
+ * Here we are using the font-size mixin to not only set the appropriate REM
+ * font size based on the PX size provided in the config file, but also to 
+ * achieve the appropriate line-height. See "_mixins.scss" for a better look.
+ */
+h1,.h1 {
+    @include font-size($font-size-h1);
+}
+h2,.h2 {
+	@include font-size($font-size-h2);
+}
+h3,.h3 {
+    @include font-size($font-size-h3);
+}
+h4,.h4 {
+    @include font-size($font-size-h4);
+}
+h5,.h5 {
+    @include font-size($font-size-h5);
+}
+h6,.h6 {
+    @include font-size($font-size-h6);
+}
+
+/**
+ * Heading Groups
+ * --------------------------------------------------------------------------
+ * Here, we remove heading margins when inside a header group so they stack
+ * nicely. The heading group contains its' own margin, which is set in the
+ * shared file. 
+ *
+ * Note: We are using the headings mixin to select all headers in one swoop.
+ */
+hgroup,.hgroup {
+	@include headings(1, 6) {
+		margin-bottom: 0;
+	}
+}

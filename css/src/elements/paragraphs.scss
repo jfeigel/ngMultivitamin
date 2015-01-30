@@ -1,0 +1,17 @@
+/**
+ * $PARAGRAPHS
+ * ==========================================================================
+ * The paragraph styles are set entirely through inheriting base styles set
+ * on the HTML element in the scaffolding file and the margin applied in
+ * the shared file. As such, this file is primarily for paragraph modifiers.
+ */
+
+/**
+ * Paragraph Lead
+ * --------------------------------------------------------------------------
+ * A paragraph modifier class for a slightly larger font-size, usually used
+ * on the first paragraph of a section.
+ */
+.lead {
+    @include font-size($font-size-lead);
+}

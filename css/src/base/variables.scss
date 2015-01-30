@@ -1,0 +1,101 @@
+/**
+ * $VARIABLES
+ * ==========================================================================
+ */
+
+/**
+ * Set global border-box? (True/False)
+ * --------------------------------------------------------------------------
+ * This will apply "*, *:before, *:after { box-sizing: border-box }" in
+ * "_scaffolding.scss" if set to true, and is necessary if using Vitamin F.
+ */
+$border-box-global: 		true;
+
+/**
+ * Set global position relative? (True/False)
+ * --------------------------------------------------------------------------
+ * This will apply "*, *:before, *:after { position: relative }" in
+ * "_scaffolding.scss" if set to true.
+ */
+$position-relative-global:	true;
+
+/**
+ * Base type configurations
+ * --------------------------------------------------------------------------
+ * Base font-size, line-height, and font-family for the project are 
+ * defined on <html> in "_scaffolding.scss", based on the variables below.
+ *
+ * 1. Used as the denominator in calculating the REM of a all other 
+ *    font-sizes that are defined using the "font-size" mixin, found in
+ *	  "_mixins.scss".
+ * 2. Used as a divisor in the same mixin as mentioned in (2) in order to 
+ *    calculate the appropriate line-height for those font-sizes.
+ */
+$font-size-base: 			16px; /* 1 */
+$line-height-base: 			24px; /* 2 */
+$line-height-ratio: 		$line-height-base / $font-size-base;
+$font-family-base: 			sans-serif;
+
+/**
+ * Utility font sizes
+ * --------------------------------------------------------------------------
+ * 1. Applied to "<small>" in "components/_smallprint.scss".
+ * 2. Applied to ".lead" class, for slightly larger paragraphs in 
+ *    "components/_paragraphs.scss".
+ */
+$font-size-small: 			12px; /* 1 */
+$font-size-lead: 			20px; /* 2 */
+
+/**
+ * Heading font sizes
+ * --------------------------------------------------------------------------
+ * All headings as well as "<hgroup>" are styled in "components/_headings.scss".
+ */
+$font-size-h1:           	36px;
+$font-size-h2:           	30px;
+$font-size-h3:           	24px;
+$font-size-h4:           	20px;
+$font-size-h5:           	16px;
+$font-size-h6:           	14px;
+
+
+/**
+ * Base spacing units
+ * --------------------------------------------------------------------------
+ * This base spacing unit will be primarily used for bottom margins on most
+ * base HTML elements. This is applied in the "components/_shared.scss" file.
+ * The half spacing unit is primarily used for margins on floated objects
+ * and form fields.
+ */
+$spacing-unit-base: 		$line-height-base;
+$spacing-unit-half: 		$spacing-unit-base / 2;
+
+/**
+ * Grid variables
+ * --------------------------------------------------------------------------
+ * Variables relative to the Grid, starting with weather or not you want to
+ * make it responsive.
+ */
+$responsive: 				true;
+/**
+ * Container widths (Sets max content width)
+ */
+$container-width: 			960px;
+/**
+ * Gutter spacing for grid items
+ */
+$spacing-unit-grid:			20px;
+/**
+ * Breakpoints based on screen size
+ */
+$palm-start:				768px;
+$portable-start:         	1024px;
+
+/**
+ * Base UI colors
+ * --------------------------------------------------------------------------
+ * This $ui-color is simply serving as a placeholder, and is not used.
+ * Go ahead and start creating your projects own color pallette to be applied 
+ * to your modifier classes.
+ */
+$ui-color: 					#B4D455;

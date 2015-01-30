@@ -1,0 +1,23 @@
+/**
+ * $SHARED
+ * ==========================================================================
+ * Below are a handful of styles applied to many core content elements.
+ */
+
+/**
+ * Bottom Margins (Vertical Spacing)
+ * --------------------------------------------------------------------------
+ * Set a new global bottom margin to key content elements to achieve the ideal
+ * vertical rythm.
+ */
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dl,
+blockquote,p,address,
+table,
+fieldset,figure,
+pre,
+/* Utility Classes */
+.h1,,.h2,.h3,.h4,.h5,.h6,.hgroup {
+	margin-bottom: $spacing-unit-base;
+    margin-bottom: ($spacing-unit-base / $font-size-base)*1rem;
+}

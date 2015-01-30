@@ -1,0 +1,3 @@
+$bootstrap-location: '../../bower_components/bootstrap-sass/assets';
+$bootstrap-sass-asset-helper: true;
+$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", $bootstrap-location + "/fonts/bootstrap/");

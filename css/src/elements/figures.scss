@@ -1,0 +1,60 @@
+/**
+ * $FIGURE
+ * --------------------------------------------------------------------------
+ * Needs testing... Not done.
+ */
+
+figure {
+	clear: both;
+
+	img, embed, iframe {
+		display: block;
+		margin: auto;
+		max-width: 100%;
+	}
+	figcaption {
+		width: 100%;
+		@include font-size($font-size-small);
+		text-align: center;
+		margin-top: $spacing-unit-half;
+	}
+}
+
+.figure--left {
+	float: left;
+	margin-right:$spacing-unit-base;
+    margin-bottom:$spacing-unit-base;
+}
+
+.figure--right {
+	float: right;
+	margin-bottom:$spacing-unit-base;
+    margin-left:$spacing-unit-base;
+}
+
+
+.figure--split-caption-left {
+	> * {
+		float: right;
+	}
+	img, embed, iframe {
+		width: 70%;
+	}
+	figcaption {
+		width: 30%;
+		padding-right: $spacing-unit-half;
+	}
+}
+
+.figure--split-caption-right {
+	> * {
+		float: left;
+	}
+	img, embed, iframe {
+		width: 70%;
+	}
+	figcaption {
+		width: 30%;
+		padding-right: $spacing-unit-half;
+	}
+}

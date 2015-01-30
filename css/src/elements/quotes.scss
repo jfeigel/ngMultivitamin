@@ -1,0 +1,34 @@
+/**
+ * $QUOTES
+ * ==========================================================================
+ */
+
+/**
+ *
+   <blockquote>
+       <p>Insanity: doing the same thing over and over again and expecting
+       different results.</p>
+       <b class=source>Albert Einstein</b>
+   </blockquote>
+ *
+ */
+blockquote {
+    /**
+     * .4em is roughly equal to the width of the opening “ that we wish to hang.
+     */
+    text-indent:-0.41em;
+    margin-left: 0.41em;
+
+    p:last-of-type{
+        margin-bottom:0;
+    }
+}
+
+.source {
+    display:block;
+    text-indent:0;
+
+    &:before{
+        content:"\2014";
+    }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "angular-multivitamin",
+  "version": "0.0.1",
+  "authors": [
+    "James Feigel <james.feigel@gmail.com>"
+  ],
+  "description": "Angular application extension of multivitamin",
+  "main": "index.html",
+  "keywords": [
+    "AngularJS",
+    "multivitamin"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jfeigel/angular-multivitamin",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1",
+    "angular": "~1.2",
+    "angular-bootstrap": "~0.12.0",
+    "angular-ui-router": "~0.2.13",
+    "bootstrap-sass": "~3.3.3"
+  }
+}

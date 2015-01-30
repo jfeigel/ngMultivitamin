@@ -1,0 +1,92 @@
+/**
+ * $BUTTONS
+ * ==========================================================================
+ * The button classes are best applied to links, buttons, and submit inputs.
+ * These components can be used in forms, as calls to action, or as part of the
+ * general UI.
+ *
+ *	Recommended use:
+ *
+ *	<a class="button [button--modifier]" role="button" href="[url]">Button text</a>
+ *	<button class="button [button--modifier]" type="submit">Button text</button>
+ *	<input class="button [button--modifier]" type="submit" value="Button text">
+ */
+
+/**
+ * Base Button
+ * --------------------------------------------------------------------------
+ * This boilerplate button class provides somewhat of a reset, so that
+ * the ".button" class can look the same on links, buttons, and submit inputs.
+ * It also serves as some very base styling. This shouldn't need any changes.
+ * Instead, one should build off this boilerplate button with style modifiers
+ * like shown in the above examples.
+ */
+.button {
+ 	display: inline-block;				          
+ 	border: none;
+ 	margin: 0; 
+ 	white-space: nowrap; 				          
+ 	font-family: inherit;				          
+    line-height: normal;				          
+    text-decoration: none;				          
+    text-align: center; 				          
+    vertical-align: middle;				          
+    cursor: pointer;					          
+    @include vendor(user-select, none);    
+
+    /* UI States */
+    &:hover,
+    &:active,
+    &:focus {
+    	text-decoration: none;
+    	outline: none;
+    }
+
+    &:-moz-focus-inner {
+    	border: 0;
+    	padding: 0;
+    }
+
+    &:disabled,
+    &.disabled {
+    	cursor: default;
+    }
+}
+
+/**
+ * Button Sizes
+ * --------------------------------------------------------------------------
+ * Place your button size modifiers here. Below are a few examples of some
+ * modifiers that I use, but feel free to delete these and create your own.
+ * Notice, I redifine the ".button" class giving it a default sizing.
+ */
+.button {
+    font-size: $font-size-base;
+    padding: $spacing-unit-half $spacing-unit-base*2;
+}
+.button--small {}
+.button--large {} 
+.button--fluid {}
+
+ /**
+ * Button Functions
+ * --------------------------------------------------------------------------
+ * Place styles in the same fashion as button sizes here for various button
+ * functions. Such as ".button--success" or ".button--error".
+ */
+ .button--success {}
+ .button--error {}
+
+ /**
+ * Button Aesthetics
+ * --------------------------------------------------------------------------
+ * Place styles in the same fashion as button sizes here for various generic
+ * button styles, of which might include base ui colors you set in the base
+ * "_variables.scss" file. Again, below is a common way I would go about it, but
+ * feel free to delete this and create your own. Notice, I redifine the 
+ * ".button" class giving it a default aesthetics.
+ */
+.button {
+    background-color: #B4D455;
+}
+.button--secondary {}
