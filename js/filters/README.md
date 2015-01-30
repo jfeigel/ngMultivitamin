@@ -1,1 +1,1 @@
-Put each separate filter in the `filter` folder and grunt will concatenate them all into filter.js.
+Put each separate filter in the `src` folder and grunt will concatenate them all into filters.js.
